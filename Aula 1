@@ -47,6 +47,7 @@ qual a previsão de utilização de CPU?
 Ao mesmo tempo consegue utilizar 3 programa
 
 segundo esse cenário teria
+
 utilização de CPU = 1 - 0.8 ** 3
 utilização de CPU = 1 - 0.51 = 0.49 = 49%
 
@@ -66,7 +67,71 @@ Permite que So aumente o grau de multiplicação de 7 para 11
 Utilizando a formula anterior a utilização de CPU será de 91%
 ganho de apenas 12%
 
+Threads são unidades básicas de execução em um programa.
 
+Permitem que um programa execute múltiplas tarefas simultaneamente, dividindo sua execução
+em pequenas partes que podem ser executadas de forma concorrente.
 
+Cada thread tem seu próprio fluxo de execução, compartilhando recursos com outras threads do
+mesmo processo, como memória e variáveis. Isso permite que programas realizem tarefas paralela,
+melhorando a eficiência e a responsividade.
 
+User File Directory (UFD): para cada usuário existe um diretório particular e assim poderia criar arquivos
+com qualquer nome.
 
+Master File Directory (MFD): nível de diretório adicional para controle, indexado pelo nome do usuário e
+cada entrada aponta para o diretório pessoal.
+
+É análoga a uma estrutura de dados em árvore onde o MFD é a raiz, os galhos são a UFD e os arquivos são
+as folhas.
+
+Quando se referencia a um arquivo é necessário especificar seu nome e seu diretório isto é chamado de
+path (caminho).
+
+Diferença entre Processos e Threads:
+
+* Processos são tipicamente independentes, enquanto os threads existem como subconjuntos de um
+processo;
+
+* Processos têm espaços de endereço separados, enquanto os segmentos compartilham seu espaço de
+endereço;
+
+* Processos interagem somente através de mecanismos de comunicação entre processos fornecidos pelo
+sistema;
+
+* Atroca de contexto entre threads no mesmo processo é mais rápida que o contexto alternando entre os
+processos.
+
+Desvantagem do uso de threads
+
+* O desenvolvimento de aplicações com uso de threads não é simples.
+
+Vantagens do uso de threads
+
+* Não existe necessidade de comunicação entre processos;
+
+* Utilização de multiprocessadores para um mesmo processo;
+
+* Um programa pode continuar sendo executado mesmo se parte dele estiver bloqueada.
+
+* Os computadores utilizam uma hierarquia de memória em sua organização, combinando memórias
+voláteis e não-voláteis (memória cache, RAM e secundária).
+
+* O gerenciador de memória do SO, controla quais partes da memória estão sendo utilizadas e quais não
+estão. É responsável por alocar espaço em memória aos processos que serão executados e liberar as
+posições de memória ocupadas quando os processos são finalizados.
+
+* Uma outra funcionalidade do gerenciador de memória é controlar o swapping de dados.
+
+Swapping: trazer um processo armazenado em memória secundária para a memória principal (swap
+in), executá-lo durante um intervalo de tempo e depois devolvê-lo à memória secundária (swap out)
+
+ATRIBUTOS
+
+* Informações de controle que dependendo do sistema de arquivos variam, por exemplo: tamanho, criador,
+permissão e data.
+
+* Alguns atributos especificados na criação do arquivo não podem ser mudados e outros são modificados
+pelo próprio SO, como por exemplo os macTimes (data e hora de acesso, modificação, etc).
+
+* E há atributos que podem ser alterados pelo usuário tais como permissão, tamanho e senha.
