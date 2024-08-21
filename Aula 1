@@ -31,3 +31,23 @@ No windows
 No Unix
  Cria processo Pai e processo Filho com uma cópia do espaço do endereçamento dom pai, mas com
  espaço de endereçamento distintos.
+
+20% ele processa (Ativo)
+80% ele está esperando entrada/Saida (Em espera)
+ 80% ou 0.8
+ 20% ou 0.2
+Calculo               
+Utilização CPU = 1 - p/n
+
+CPU, 8 GB de RAM considere que 
+O SO ocupe 2 GB de RAM
+Cada programa de usuario ocupe 2 GB de RAM
+
+qual a previsão de utilização de CPU?
+Ao mesmo tempo consegue utilizar 3 programa
+
+segundo esse cenário teria
+utilização de CPU = 1 - 0.8 ** 3
+utilização de CPU = 1 - 0.51 = 0.49 = 49%
+
+
