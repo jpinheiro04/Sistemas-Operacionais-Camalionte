@@ -1,1 +1,33 @@
+Processos
+Conceito mais central em qualquer SO é o processo: Uma abastração de um programa execução.
 
+Uma única CPU dividia os processos em alguns nucleos para execitar varias tarefas por vez.
+
+Alguns processos operam em PRIMEIRO PLANO, isto é, interagem com usuários(humanos) e realizam algum trabalho para eles.
+Outros operam em SEGUNDO PLANO e não estão associados com usuário em particular mas com uma função especifica.
+
+processos em segundo plano para lidar com algumas atividades, como mostrar notificação whatsapp é chamada de daemons.
+
+Definição de processos
+Programa em execução, contador de programas, registradores e variaveis.
+Nem sempre um programa equivale a apenas um processo.
+Reentrância, o códio de um programa pode gerar vários processos.
+
+SO gerencia os processos utilizando BCP Bloco de Controle de Processos
+
+processos possui 3 estados
+
+Em execução - Sendo executado, realmente usando a CPU naquele instante.
+Pronto - Aguardando para ser executado; temporariamente parado para deixar outro processo ser executado
+Em espera - Incapaz de ser executado até que algum evento externo aconteça, por exemplo aguardando um recurso externo como I/O
+
+Principais eventos que causam a criação de um processo
+ Inicialização do sistema;
+ Execução de uma chamada ao sistema de criação de processo por um processo em execução;
+ Uma requisição de usuário para a criação de um novo processo;
+ Início de um job em lote.
+No windows
+ Cria processo Pai e processo Filho com mesmo endereçamento sempre.
+No Unix
+ Cria processo Pai e processo Filho com uma cópia do espaço do endereçamento dom pai, mas com
+ espaço de endereçamento distintos.
